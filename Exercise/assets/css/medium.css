@@ -833,26 +833,7 @@ main{
         padding-top: 50px; 
         border-top: 1px solid #f2f2f2; 
     }
-    .containerDelleSezioni {
-    display: flex; 
     
-    justify-content: space-between; /
-    align-items: flex-start; 
-    max-width: 1200px; 
-    margin: 0 auto; 
-    padding: 20px; 
-  }
 
-  .rightSide {
-    flex: 1; /* La colonna destra occupa una parte dello spazio */
-    padding-right: 20px; /* Spazio tra le colonne */
-    /* Potresti voler impostare una larghezza fissa o massima per la sidebar se preferisci */
-    /* max-width: 300px; */
-  }
-
-  .leftSide {
-    flex: 2; /* La colonna sinistra occupa due parti dello spazio (sarà più larga) */
-    padding-left: 20px; /* Spazio tra le colonne */
-  }
-
+  
 }
