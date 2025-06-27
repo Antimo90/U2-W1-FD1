@@ -1,4 +1,858 @@
+/* mobile */
+
 body {
     font-family: 'Roboto', sans-serif; 
     color: #292929; 
+}
+
+/* HEAD */
+header{
+    background-color:#ffc017;
+    
+}
+header nav ul li:nth-child(-n+3){
+    display: none;
+}
+
+#seriesOfM{
+    display: none;
+}
+
+.headerContent {
+    
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    border-bottom: 1px solid rgba(41, 41, 41, 1);
+    padding-bottom: 20px;
+    padding-top: 20px ;
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+    background-color: #ffc017; 
+    border-bottom: 1px solid rgba(41, 41, 41, 1);
+    transition: background-color 0.3s ease, border-bottom 0.3s ease;
+}
+.logo{
+    fill: #000; /* Colore del logo (nero) */
+    height: 25px; /* Altezza del logo */
+    width: auto; 
+    margin-left: 10px;
+}
+
+header nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li{
+    margin-right: 10px;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: #191919;
+    font-size: 13px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover{
+    color: grey;
+}
+
+.btnGetStarted {
+    background-color:#191919; 
+    color: #fff; 
+    padding: 8px 13px; 
+    border-radius: 999em; 
+    font-weight: 400; 
+    font-size: 16px; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* NUOVA CLASSE PER QUANDO LA NAV È BIANCA */
+.headerContent.scrolled {
+    background-color: #fff; 
+    border-bottom-color: #f2f2f2; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+
+.headerContent.scrolled nav ul li a {
+    color: #191919; 
+}
+
+
+.headerContent.scrolled .btnGetStarted {
+    background-color: #008a00;
+    color: #fff;
+}
+
+.headerContent.scrolled .btnGetStarted:hover {
+    background-color: #006b00; /* Verde più scuro all'hover */
+}
+
+.btnGetStarted:hover {
+    background-color:#fff; 
+    color:#191919;
+}
+
+.secondSection{
+    background-color: #ffc017;
+    border-bottom: 1px solid rgba(41, 41, 41, 1);
+    padding: 50px 0 80px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.secondContent{
+    
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.secondContent h1{
+    font-family: 'Spectral', serif;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 95px;
+    letter-spacing: -0.05em;
+    margin-bottom: 10px;
+    color: #191919;
+}
+
+.secondContent p{
+    font-family: 'Roboto', sans-serif;
+     font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 40px;
+    color: #191919;
+}
+
+.startReadingBtn{
+    background-color: #191919;
+    color: #fff;
+    padding: 5px 40px; 
+    border-radius: 999em;
+    text-decoration: none; 
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.startReadingBtn:hover{
+    background-color: #fff;
+    color: #191919;
+}
+
+/* MAIN */
+
+
+
+main{
+    background-color: #fff;
+    padding: 40px 0 0 0;
+}
+
+.mainContainer { 
+    margin: 0 auto; 
+    padding: 0 24px;
+    border-bottom: 1px solid #F2F2F2;
+}
+.trendingSection {
+    margin-bottom: 50px; 
+}
+
+.trendingHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px; 
+}
+
+.trendingHeader  {
+    width: 28px; 
+    height: 28px;
+    margin-right: 12px;
+    
+}
+
+.trendingHeader .trendingIcon {
+    width: 28px; 
+    height: 28px;
+    margin-right: 12px; 
+    border-radius: 50%;
+    padding: 2px;
+    box-sizing: border-box;
+}  
+
+.trendingHeader h2{
+    
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    color: #191919;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.trendingArticlesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 48px 32px; 
+}
+
+.trendingArticle {
+    display: flex;
+    align-items: flex-start; 
+    position: relative; 
+}
+
+.trendingArticle .articleNumber {
+    font-family: 'Spectral', serif; 
+    font-size: 32px; 
+    font-weight: 700;
+    color: #E6E6E6; 
+    line-height: 1; 
+    margin-right: 16px; 
+    min-width: 32px; 
+    text-align: right; 
+}
+
+.trendingArticle .articleDetails {
+    display: flex;
+    flex-direction: column; 
+    flex: 1; 
+}
+
+.trendingArticle .authorInfo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px; 
+}
+
+.trendingArticle .authorAvatar {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; 
+    margin-right: 8px;
+    object-fit: cover; 
+}
+
+.trendingArticle .authorName {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px; 
+    font-weight: 500; 
+    color: #292929;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+
+.trendingArticle .authorName:hover {
+    color: #000;
+}
+
+.trendingArticle .category {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    font-weight: 400; 
+    color: #6B6B6B; 
+    text-decoration: none;
+    margin-left: 4px;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.trendingArticle .category:hover {
+    color: #292929; 
+}
+
+
+.trendingArticle h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px; 
+    font-weight: 700; 
+    line-height: 22px; 
+    margin-bottom: 6px; 
+    max-width: 90%; 
+}
+
+.trendingArticle h3 a {
+    color: #292929; 
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.trendingArticle h3 a:hover {
+    color: #000;
+}
+
+.trendingArticle .articleMeta {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    color: #8a8888d2; 
+    white-space: nowrap; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%; 
+}
+
+/* DISCOVER MORE SECTION */
+.discoverMoreSection {
+    padding: 30px 0; 
+    border-top: 1px solid #f2f2f2; 
+    border-bottom: 1px solid #f2f2f2;
+    margin-top: 50px; 
+    margin-left: 25px;
+    
+}
+
+.discoverMoreSection h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    color: #191919;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.topicsGrid {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 8px; 
+    margin-bottom: 10px;
+}
+
+.topicBtn {
+    display: inline-block; /* Per permettere padding e margin */
+    border:  1px solid #c7c6c6;
+    color: #9e9e9e; /* Colore del testo */
+    padding: 8px 16px; /* Padding interno */
+    border-radius: 5px; /* Bordi arrotondati (pill shape) */
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap; /* Evita che il testo vada a capo nei pulsanti */
+}
+
+
+/* "FOOTER" SECTION */
+.sectionLinks {
+    background-color: #fff; 
+    padding: 35px 0; 
+   
+}
+
+
+.boxLink {
+    width: 100%; 
+}
+
+.pageLinks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.pageLink { 
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px; 
+    color: #6B6B6B; 
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin-left: 10px;
+    line-height: 2; 
+}
+
+.pageLink:hover { 
+    color: #191919; 
+}
+/* Stili per la sezione che contiene tutti gli articoli principali */
+
+
+/* Stili per ogni singolo articolo principale  */
+.mainArticle {
+    display: flex; 
+    flex-direction: column; 
+    margin-bottom: 20px; 
+    padding-bottom: 20px; 
+     
+}
+
+/* Rimuove il bordo e il margine inferiore dall'ultimo articolo della lista */
+.mainArticle:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* Stili per l'intestazione dell'articolo (autore e avatar) */
+.articleHeader {
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 15px; 
+}
+
+/* Stili per l'immagine dell'autore nell'intestazione */
+.authorAvatar-large {
+    width: 24px; 
+    height: 24px;
+    border-radius: 50%; 
+    margin-right: 8px; 
+    margin-left: 10px;
+    object-fit: cover; 
+}
+
+/* Stili per il nome dell'autore */
+.authorName {
+    font-family: 'Roboto', sans-serif; 
+    font-size: 14px;
+    font-weight: 500; 
+    color: #292929; 
+    text-decoration: none; 
+     
+}
+
+
+
+/* Stili per il corpo principale dell'articolo (testo e immagine affiancati) */
+.articleBody {
+    display: flex; 
+    gap: 30px; 
+    align-items: flex-start; 
+}
+
+/* Stili per il blocco di testo dell'articolo */
+.articleText {
+    flex: 1; 
+}
+
+/* Stili per il titolo dell'articolo */
+.articleText h2 {
+    font-family: 'Spectral', serif; 
+    font-size: 18px;
+    font-weight: 900;
+    margin-bottom: 4px; 
+    margin-left: 10px;
+}
+
+.articleText h2 a {
+    color: #292929; 
+    text-decoration: none; 
+
+}
+
+
+/* Stili per il paragrafo descrittivo dell'articolo */
+.articleText p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    color: #9c9c9c; 
+    margin-bottom: 10px; 
+    margin-left: 10px;
+}
+
+/* Stili per il contenitore dell'immagine dell'articolo */
+.articleImage {
+    flex-shrink: 0; 
+    width: 200px; 
+    height: 134px; 
+    overflow: hidden; 
+    border-radius: 4px; 
+}
+
+.articleImage img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+}
+
+/* Stili per i metadati dell'articolo (data, tempo di lettura, categoria) */
+.articleMeta {
+    font-family: 'Roboto', sans-serif;
+    font-size: 8px;
+    color: #a1a0a0d2; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+    margin-left: 10px;
+}
+
+/* Stili per il "tag" della categoria */
+.articleMeta .category {
+    background-color: #858484; 
+    padding: 4px 8px; 
+    border-radius: 4px; 
+    text-decoration: none; 
+    color: #6B6B6B; 
+}
+.articlesListSection .articleMeta span:nth-child(3) {
+    background-color: #e9e8e8;
+    border-radius: 999em;
+    padding: 8px 8px;
+}
+
+
+
+
+/* tablet */
+@media screen and (min-width: 768px) {
+    body {
+        font-size: 16px;
+        
+    }
+    header { 
+        position: relative; 
+        overflow: hidden; 
+    }
+    header nav ul li:nth-child(-n+3){
+    display: inline-block;
+    }
+
+
+    #seriesOfM{
+        display: inline-block; 
+        width: 100%; 
+        position: absolute; 
+        top: 96px;
+        left: 411px;
+        
+    }
+    
+
+    .headerContent {
+        padding: 25px 40px;
+    }
+
+    .logo {
+        height: 35px;
+    }
+
+    header nav ul li {
+        margin-right: 20px;
+    }
+
+    header nav ul li a {
+        font-size: 16px;
+    }
+
+    .btnGetStarted {
+        padding: 10px 20px;
+        font-size: 18px;
+    }
+
+    .secondSection {
+        padding: 90px 0;
+        
+    }
+
+    .secondContent {
+        padding: 0 40px;
+    }
+
+    .secondContent h1 {
+        font-size: 70px;
+        line-height: 80px;
+    }
+
+    .secondContent p {
+        font-size: 24px;
+        line-height: 32px;
+        max-width: 550px;
+    }
+
+    .startReadingBtn {
+        padding: 10px 45px;
+        font-size: 22px;
+    }
+
+    .mainContainer {
+        padding: 0 40px;
+    }
+
+    .trendingHeader {
+        margin-bottom: 30px;
+    }
+
+    .trendingHeader .trendingIcon {
+        width: 32px;
+        height: 32px;
+        margin-right: 15px;
+    }
+
+    .trendingHeader h2 {
+        font-size: 14px;
+    }
+
+    .trendingArticlesGrid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 30px;
+    }
+
+    .trendingArticle .articleNumber {
+        font-size: 38px;
+        margin-right: 20px;
+    }
+
+    .trendingArticle .authorAvatar {
+        width: 24px;
+        height: 24px;
+    }
+
+    .trendingArticle h3 {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .trendingArticle .articleMeta {
+        font-size: 14px;
+        gap: 10px;
+    }
+
+    .mainContentFlex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        border-top: 1px solid #f2f2f2;
+    }
+
+    .articlesColumn {
+        flex: 1 1 calc(66% - 40px);
+        margin-right: 40px;
+        min-width: 450px;
+        padding-right: 0;
+        padding-left: 20px;
+    }
+
+    .sidebarColumn {
+        flex: 0 0 calc(34% - 40px);
+        margin-left: 40px;
+        min-width: 280px;
+        padding-left: 20px;
+        border-top: none;
+        padding-top: 0;
+    }
+
+    .mainArticle {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50px;
+        padding-bottom: 50px;
+        border-bottom: 1px solid #f2f2f2;
+        margin: 0 20px;
+    }
+    .pageLink{
+        margin-left: 25px;
+    }
+
+    .mainArticle:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .articleHeader {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .authorAvatar-large {
+        width: 28px;
+        height: 28px;
+        margin-right: 8px;
+        margin-left: 0;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    .authorName {
+        font-size: 15px;
+        font-weight: 500;
+        color: #292929;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .articleBody {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        align-items: flex-start;
+    }
+
+    .articleText {
+        flex: 1;
+    }
+
+    .articleText h2 {
+        font-family: 'Spectral', serif;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 8px;
+        margin-left: 0;
+    }
+
+    .articleText h2 a {
+        color: #292929;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .articleText h2 a:hover {
+        color: #000;
+    }
+
+    .articleText p {
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #6B6B6B;
+        margin-bottom: 15px;
+        margin-left: 0;
+    }
+
+    .articleImage {
+        flex-shrink: 0;
+        width: 200px;
+        height: 134px;
+        overflow: hidden;
+        border-radius: 4px;
+    }
+
+    .articleImage img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .articleMeta {
+        font-family: 'Roboto', sans-serif;
+        font-size: 13px;
+        color: #8a8888d2;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        justify-content: flex-start;
+        margin-left: 0;
+    }
+
+    .articleMeta .category {
+        background-color: #f2f2f2;
+        padding: 4px 8px;
+        border-radius: 4px;
+        text-decoration: none;
+        color: #6B6B6B;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        white-space: nowrap;
+    }
+    .articleMeta .category:hover {
+        background-color: #e6e6e6;
+        color: #292929;
+    }
+
+    .articlesListSection .articleMeta span:nth-child(3) {
+        background-color: #f2f2f2;
+        border-radius: 4px;
+        padding: 4px 8px;
+    }
+
+    .discoverMoreSection {
+        margin-bottom: 50px;
+        padding-top: 0;
+        border-top: none;
+    }
+
+    .whoToFollowSection {
+        margin-bottom: 50px;
+    }
+
+    .sidebarFooterLinks {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding-top: 20px;
+        border-top: 1px solid #f2f2f2;
+    }
+
+    .sidebarFooterLinks .sidebarLink {
+        font-size: 13px;
+        color: #6B6B6B;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .sidebarFooterLinks .sidebarLink:hover {
+        color: #292929;
+    }
+    
+}
+
+/* desktop */
+@media screen and (min-width: 1200px){
+    
+ .secondContent {
+        
+        margin-left: 100px;
+    }
+    #seriesOfM{
+        width: 70%;
+        left: 556px;
+    }
+
+    main{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .trendingArticlesGrid {
+        
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 60px 40px; 
+    }
+    .desktopMainContentWrapper {
+        display: flex; 
+        justify-content: space-between; 
+        gap: 60px; 
+        align-items: flex-start; 
+        padding-top: 50px; 
+        border-top: 1px solid #f2f2f2; 
+    }
+    .containerDelleSezioni {
+    display: flex; 
+    
+    justify-content: space-between; /
+    align-items: flex-start; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 20px; 
+  }
+
+  .rightSide {
+    flex: 1; /* La colonna destra occupa una parte dello spazio */
+    padding-right: 20px; /* Spazio tra le colonne */
+    /* Potresti voler impostare una larghezza fissa o massima per la sidebar se preferisci */
+    /* max-width: 300px; */
+  }
+
+  .leftSide {
+    flex: 2; /* La colonna sinistra occupa due parti dello spazio (sarà più larga) */
+    padding-left: 20px; /* Spazio tra le colonne */
+  }
+
 }
